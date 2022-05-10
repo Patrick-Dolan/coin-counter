@@ -16,7 +16,7 @@ module.exports = {
     new Dotenv(),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'jsDevEnvironmentTemplate',
+      title: 'Coin Counter',
       template: './src/index.html',
       inject: 'body'
     })
