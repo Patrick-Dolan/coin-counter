@@ -20,7 +20,7 @@ import './css/styles.css';
 
 const coinCounterRecursion = (num) => {
   if (isNaN(num)) {
-    return "Please enter a number."
+    return "Please enter a number.";
   }
   if (num === 0) {
     return "";
@@ -38,7 +38,7 @@ const coinCounterRecursion = (num) => {
     const pennies = Math.floor(num / .01);
     return ` ${pennies} pennies`;
   }
-}
+};
 
 $(() => {
   $("form#coinForm").on("submit", (event) => {
