@@ -46,5 +46,6 @@ $(() => {
     const amountToConvert = parseFloat($("input#money").val());
     const convertedAmount = coinCounterRecursion(amountToConvert);
     $(".result").text(convertedAmount);
+    $(".changeContainer").show();
   });
 });
