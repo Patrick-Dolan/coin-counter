@@ -4,19 +4,19 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 
-function amountTocoins(amount, coins) {
-  if (amount === 0) {
-    return [];
-  } else {
-    if (amount >= coins[0]) {
-      left = (amount - coins[0]);
-      return [coins[0]].concat( amountTocoins(left, coins) );
-    } else {
-      coins.shift();
-      return amountTocoins(amount, coins);
-    }
-  }
-} 
+// function amountTocoins(amount, coins) {
+//   if (amount === 0) {
+//     return [];
+//   } else {
+//     if (amount >= coins[0]) {
+//       left = (amount - coins[0]);
+//       return [coins[0]].concat( amountTocoins(left, coins) );
+//     } else {
+//       coins.shift();
+//       return amountTocoins(amount, coins);
+//     }
+//   }
+// } 
 
 const coinCounterRecursion = (num) => {
   if (isNaN(num)) {
@@ -40,4 +40,11 @@ const coinCounterRecursion = (num) => {
   }
 }
 
-console.log(coinCounterRecursion(4.99));
+$(document).ready(() => {
+  $("form#coinForm").submit((event) => {
+    event.preventDefault();
+    const amountToConvert = parseFloat($("input#money").val());
+    const convertedAmount = coinCounterRecursion(amountToConvert);
+    $(".result").text(convertedAmount);
+  });
+});
