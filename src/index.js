@@ -40,8 +40,8 @@ const coinCounterRecursion = (num) => {
   }
 }
 
-$(document).ready(() => {
-  $("form#coinForm").submit((event) => {
+$(() => {
+  $("form#coinForm").on("submit", (event) => {
     event.preventDefault();
     const amountToConvert = parseFloat($("input#money").val());
     const convertedAmount = coinCounterRecursion(amountToConvert);
