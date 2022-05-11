@@ -22,7 +22,7 @@ A small application that takes in a dollar amount and tells you how many quarter
 ## Setup/Installation Requirements
 
 * Download or Clone the repo down to your computer.
-* Navigate into the "galactic-age-calculator" directory you just downloaded and open it with your terminal and code editor of choice of choice.
+* Navigate into the "coin-counter" directory you just downloaded and open it with your terminal and code editor of choice of choice.
 * type "npm install" in your terminal to install dependencies.
 * type "npm run start" to launch the program.
 
